@@ -10,12 +10,6 @@ export default function RootLayout() {
           headerShown: false,
         }}
       />
-      {/* <Stack.Screen
-        name="text-os"
-        options={{
-          title: "Bayer Dithering",
-        }}
-      /> */}
     </Stack>
   );
 }
