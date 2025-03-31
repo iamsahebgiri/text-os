@@ -1,6 +1,3 @@
-import DitherImage from "@/components/dither-image";
-import { posts } from "@/utils/dummy";
-import { timeAgo } from "@/utils/time";
 import { useAtoms } from "@/utils/use-atoms";
 import { router } from "expo-router";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
@@ -14,6 +11,10 @@ const pages = [
 	{
 		id: "thumbhash",
 		title: "ThumbHash",
+	},
+	{
+		id: "pulsating-grid",
+		title: "Pulsating Grid",
 	},
 ];
 
@@ -29,6 +30,7 @@ export default function Index() {
 					renderItem={({ item }) => (
 						<TouchableOpacity
 							onPress={() => {
+								// @ts-ignore
 								router.push(item.id);
 							}}
 							style={[
